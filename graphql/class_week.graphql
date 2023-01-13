@@ -1,0 +1,17 @@
+query ClassWeekQuery($name: String!, $week: Int!) {
+  classWeek(name: $name, week: $week) {
+    scheduleDefinitions {
+      from
+      to
+    }
+    days {
+      date
+      lessons {
+        name
+        teacher
+        room
+        flags
+      }
+    }
+  }
+}
